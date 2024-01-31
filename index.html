@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gallary App</title>
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="./index.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h2 class="h2">Gallary App</h2>
+  <div class="container"></div>
+    <input style="padding: 10px; border-radius:10px" type="file" id="imageInput" accept="image/*">
+    <br>
+
+
+    <div class="btndel">
+      <button onclick="showConfirmationModal()" id="deleteImages">Delete All Images</button>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <p class="modal-content__p">Are you sure you want to delete all images?</p>
+            <div class="modal-buttons">
+                <button onclick="deleteAllImages()" id="confirm">Yes</button>
+                <button onclick="hideConfirmationModal()" id="cancel">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider -->
+    <div id="modalSliderContainer">
+      <button id="closeModalSlider"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalSlider">
+        <!-- <button id="nextModalImg"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="previousModalImg"><i class="fa-solid fa-arrow-right"></i></button> -->
+        <img id="modalImg" src="" alt="Modal Slider Image">
+      </div>
+    </div>
+</body>
+</html>
